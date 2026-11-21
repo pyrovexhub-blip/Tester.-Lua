@@ -1,5 +1,5 @@
 --==============================================================
--- PYROVEX LOADER V18 | CLOUTHUB UPDATE
+-- PYROVEX LOADER V18 | CLOUTHUB FEATURED UPDATE
 --==============================================================
 
 local Players = game:GetService("Players")
@@ -2072,10 +2072,15 @@ local function CreateScriptCard(scriptInfo, index)
     Round(CardAccent, 5)
     AnimateGradient(PremiumGradient(CardAccent, 90), 3.5)
 
+    -- CLOUTHUB IMAGE UPDATE
     local ScriptLogo
 
     if scriptInfo.Name == "CHILI HUB" then
         ScriptLogo = "rbxthumb://type=Asset&id=103785364011347&w=420&h=420"
+
+    elseif scriptInfo.Name == "CLOUTHUB" then
+        ScriptLogo = "rbxthumb://type=Asset&id=129249733345141&w=420&h=420"
+
     else
         ScriptLogo = "rbxthumb://type=Asset&id=111679469652157&w=420&h=420"
     end
@@ -2150,9 +2155,14 @@ local function CreateScriptCard(scriptInfo, index)
         return badge
     end
 
-    if scriptInfo.Name == "CHILI HUB" then
+    -- FEATURED BADGE FOR CLOUTHUB
+    if scriptInfo.Name == "CHILI HUB"
+    or scriptInfo.Name == "CLOUTHUB" then
+
         CreateBadge("FEATURED", C.Purple, 50)
+
     elseif HasHubBadges then
+
         CreateBadge("FEATURED", C.Purple, 50)
         CreateBadge("BY PYROVEX HUB", Color3.fromRGB(54, 65, 110), 78)
     end
@@ -2748,5 +2758,7 @@ print("INSTANT SETTINGS SWITCHING ENABLED")
 print("ALL SCRIPTS COLLECTION INITIALIZED")
 print("7 SCRIPTS AVAILABLE")
 print("CLOUTHUB ADDED TO STEAL AN EGG")
+print("CLOUTHUB FEATURED BADGE ENABLED")
+print("CLOUTHUB CUSTOM IMAGE ENABLED")
 print("PYROVEX HUB SUCCESSFULLY LOADED")
 print("==================================================")
